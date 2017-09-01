@@ -1,0 +1,334 @@
+
+=============== [2017/08/31 13:42:25, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:42:25] INFO:    SSHExec initializing ...
+[13:42:25] INFO:    Session initialized and associated with user credential 123
+[13:42:25] INFO:    SSHExec initialized successfully
+[13:42:25] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:42:28] INFO:    SSH connection established
+[13:42:28] INFO:    Ready to transfer local file 'data/sshxcute_test.sh' to server directory '/home/wangyj'
+[13:42:28] INFO:    Connection channel established succesfully
+[13:42:28] INFO:    Start to upload
+[13:42:28] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:43:10, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:43:10] INFO:    SSHExec initializing ...
+[13:43:10] INFO:    Session initialized and associated with user credential 123
+[13:43:10] INFO:    SSHExec initialized successfully
+[13:43:10] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:43:12] INFO:    SSH connection established
+[13:43:12] INFO:    Ready to transfer local file 'data/sshxcute_test.sh' to server directory '/home/wangyj'
+[13:43:12] INFO:    Connection channel established succesfully
+[13:43:12] INFO:    Start to upload
+[13:43:13] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:45:32, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:45:32] INFO:    SSHExec initializing ...
+[13:45:32] INFO:    Session initialized and associated with user credential 123
+[13:45:32] INFO:    SSHExec initialized successfully
+[13:45:32] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:45:35] INFO:    SSH connection established
+[13:45:35] INFO:    Ready to transfer local file '/home/wangyj/data/sshxcute_test.sh' to server directory '/home/wangyj'
+[13:45:35] INFO:    Connection channel established succesfully
+[13:45:35] INFO:    Start to upload
+[13:45:35] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:47:40, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:47:40] INFO:    SSHExec initializing ...
+[13:47:40] INFO:    Session initialized and associated with user credential 123
+[13:47:40] INFO:    SSHExec initialized successfully
+[13:47:40] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:47:43] INFO:    SSH connection established
+[13:47:43] INFO:    Ready to transfer local file '/home/wangyj/data/sshxcute_test.sh' to server directory '/home/wangyj'
+[13:47:43] INFO:    Connection channel established succesfully
+[13:47:43] INFO:    Start to upload
+[13:47:43] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:51:31, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:51:31] INFO:    SSHExec initializing ...
+[13:51:31] INFO:    Session initialized and associated with user credential 123
+[13:51:31] INFO:    SSHExec initialized successfully
+[13:51:31] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:51:34] INFO:    SSH connection established
+[13:51:34] INFO:    Ready to transfer local file '/home/wangyj/data/sshxcute_test.sh' to server directory '/home/wangyj/test'
+[13:51:34] INFO:    Connection channel established succesfully
+[13:51:34] INFO:    Start to upload
+[13:51:34] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:52:39, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:52:39] INFO:    SSHExec initializing ...
+[13:52:39] INFO:    Session initialized and associated with user credential 123
+[13:52:39] INFO:    SSHExec initialized successfully
+[13:52:39] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:52:41] INFO:    SSH connection established
+[13:52:41] INFO:    Ready to transfer local file 'data/sshxcute_test.sh' to server directory '/home/wangyj/test'
+[13:52:42] INFO:    Connection channel established succesfully
+[13:52:42] INFO:    Start to upload
+[13:52:42] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:54:40, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:54:40] INFO:    SSHExec initializing ...
+[13:54:40] INFO:    Session initialized and associated with user credential 123
+[13:54:40] INFO:    SSHExec initialized successfully
+[13:54:40] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:54:43] INFO:    SSH connection established
+[13:54:43] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/test'
+[13:54:43] INFO:    Connection channel established succesfully
+[13:54:43] INFO:    Start to upload
+[13:54:43] INFO:    Upload success
+[13:54:43] INFO:    channel disconnect
+[13:54:43] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[13:54:43] INFO:    Connection channel established succesfully
+[13:54:43] INFO:    Start to run command
+[13:54:43] INFO:    Connection channel closed
+[13:54:43] INFO:    Check if exec success or not ... 
+[13:54:43] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[13:54:43] INFO:    Now wait 5 seconds to begin next task ...
+[13:54:48] INFO:    Connection channel disconnect
+[13:54:48] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[13:54:48] INFO:    Connection channel established succesfully
+[13:54:48] INFO:    Start to run command
+[13:54:48] INFO:    Connection channel closed
+[13:54:48] INFO:    Check if exec success or not ... 
+[13:54:48] INFO:    Execute successfully for command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[13:54:48] INFO:    Now wait 5 seconds to begin next task ...
+[13:54:53] INFO:    Connection channel disconnect
+[13:54:53] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 13:56:24, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:56:24] INFO:    SSHExec initializing ...
+[13:56:24] INFO:    Session initialized and associated with user credential 123
+[13:56:24] INFO:    SSHExec initialized successfully
+[13:56:24] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:56:27] INFO:    SSH connection established
+[13:56:27] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/test'
+[13:56:27] INFO:    Connection channel established succesfully
+[13:56:27] INFO:    Start to upload
+[13:56:27] INFO:    Upload success
+[13:56:27] INFO:    channel disconnect
+[13:56:27] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[13:56:27] INFO:    Connection channel established succesfully
+[13:56:27] INFO:    Start to run command
+[13:56:27] INFO:    Connection channel closed
+[13:56:27] INFO:    Check if exec success or not ... 
+[13:56:27] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[13:56:27] INFO:    Now wait 5 seconds to begin next task ...
+[13:56:32] INFO:    Connection channel disconnect
+[13:56:32] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[13:56:32] INFO:    Connection channel established succesfully
+[13:56:32] INFO:    Start to run command
+[13:56:32] INFO:    Connection channel closed
+[13:56:32] INFO:    Check if exec success or not ... 
+[13:56:32] INFO:    Execute successfully for command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[13:56:32] INFO:    Now wait 5 seconds to begin next task ...
+[13:56:37] INFO:    Connection channel disconnect
+[13:56:37] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 14:06:36, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:06:36] INFO:    SSHExec initializing ...
+[14:06:36] INFO:    Session initialized and associated with user credential 123
+[14:06:36] INFO:    SSHExec initialized successfully
+[14:06:36] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:06:38] INFO:    SSH connection established
+[14:06:38] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[14:06:38] INFO:    Connection channel established succesfully
+[14:06:38] INFO:    Start to upload
+[14:06:38] INFO:    Upload success
+[14:06:38] INFO:    channel disconnect
+[14:06:38] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[14:06:39] INFO:    Connection channel established succesfully
+[14:06:39] INFO:    Start to run command
+[14:06:39] INFO:    Connection channel closed
+[14:06:39] INFO:    Check if exec success or not ... 
+[14:06:39] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[14:06:39] INFO:    Now wait 5 seconds to begin next task ...
+[14:06:44] INFO:    Connection channel disconnect
+[14:06:44] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:06:44] INFO:    Connection channel established succesfully
+[14:06:44] INFO:    Start to run command
+[14:06:44] INFO:    Connection channel closed
+[14:06:44] INFO:    Check if exec success or not ... 
+[14:06:44] INFO:    Execution failed while executing command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:06:44] INFO:    Error message: bash: ./sshxcute_test.sh: /bin/bash^M: 坏的解释器: 没有那个文件或目录
+[14:06:44] INFO:    Now wait 5 seconds to begin next task ...
+[14:06:49] INFO:    Connection channel disconnect
+[14:06:49] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 14:07:36, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:07:36] INFO:    SSHExec initializing ...
+[14:07:36] INFO:    Session initialized and associated with user credential 123
+[14:07:36] INFO:    SSHExec initialized successfully
+[14:07:36] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:07:38] INFO:    SSH connection established
+[14:07:38] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[14:07:38] INFO:    Connection channel established succesfully
+[14:07:38] INFO:    Start to upload
+[14:07:38] INFO:    Upload success
+[14:07:38] INFO:    channel disconnect
+[14:07:38] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[14:07:39] INFO:    Connection channel established succesfully
+[14:07:39] INFO:    Start to run command
+[14:07:39] INFO:    Connection channel closed
+[14:07:39] INFO:    Check if exec success or not ... 
+[14:07:39] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[14:07:39] INFO:    Now wait 5 seconds to begin next task ...
+[14:07:44] INFO:    Connection channel disconnect
+[14:07:44] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:07:44] INFO:    Connection channel established succesfully
+[14:07:44] INFO:    Start to run command
+[14:07:44] INFO:    Connection channel closed
+[14:07:44] INFO:    Check if exec success or not ... 
+[14:07:44] INFO:    Execution failed while executing command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:07:44] INFO:    Error message: bash: ./sshxcute_test.sh: /bin/bash^M: 坏的解释器: 没有那个文件或目录
+[14:07:44] INFO:    Now wait 5 seconds to begin next task ...
+[14:07:49] INFO:    Connection channel disconnect
+[14:07:49] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 14:17:44, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:17:44] INFO:    SSHExec initializing ...
+[14:17:44] INFO:    Session initialized and associated with user credential 123
+[14:17:44] INFO:    SSHExec initialized successfully
+[14:17:44] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:17:47] INFO:    SSH connection established
+[14:17:47] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[14:17:47] INFO:    Connection channel established succesfully
+[14:17:47] INFO:    Start to upload
+[14:17:47] INFO:    Upload success
+[14:17:47] INFO:    channel disconnect
+[14:17:47] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[14:17:47] INFO:    Connection channel established succesfully
+[14:17:47] INFO:    Start to run command
+[14:17:47] INFO:    Connection channel closed
+[14:17:47] INFO:    Check if exec success or not ... 
+[14:17:47] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[14:17:47] INFO:    Now wait 5 seconds to begin next task ...
+[14:17:52] INFO:    Connection channel disconnect
+[14:17:52] INFO:    Command is sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[14:17:52] INFO:    Connection channel established succesfully
+[14:17:52] INFO:    Start to run command
+[14:17:52] INFO:    Connection channel closed
+[14:17:52] INFO:    Check if exec success or not ... 
+[14:17:52] INFO:    Execute successfully for command: sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[14:17:52] INFO:    Now wait 5 seconds to begin next task ...
+[14:17:57] INFO:    Connection channel disconnect
+[14:17:57] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:17:58] INFO:    Connection channel established succesfully
+[14:17:58] INFO:    Start to run command
+[14:17:58] INFO:    Login success
+
+[14:17:58] INFO:    Connection channel closed
+[14:17:58] INFO:    Check if exec success or not ... 
+[14:17:58] INFO:    Execute successfully for command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:17:58] INFO:    Now wait 5 seconds to begin next task ...
+[14:18:03] INFO:    Connection channel disconnect
+[14:18:03] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 14:18:19, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:18:19] INFO:    SSHExec initializing ...
+[14:18:19] INFO:    Session initialized and associated with user credential 123
+[14:18:19] INFO:    SSHExec initialized successfully
+[14:18:19] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:18:22] INFO:    SSH connection established
+[14:18:22] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[14:18:22] INFO:    Connection channel established succesfully
+[14:18:22] INFO:    Start to upload
+[14:18:22] INFO:    Upload success
+[14:18:22] INFO:    channel disconnect
+[14:18:22] INFO:    Command is chmod 755 /home/wangyj/sshxcute_test.sh
+[14:18:22] INFO:    Connection channel established succesfully
+[14:18:22] INFO:    Start to run command
+[14:18:22] INFO:    Connection channel closed
+[14:18:22] INFO:    Check if exec success or not ... 
+[14:18:22] INFO:    Execute successfully for command: chmod 755 /home/wangyj/sshxcute_test.sh
+[14:18:22] INFO:    Now wait 5 seconds to begin next task ...
+[14:18:27] INFO:    Connection channel disconnect
+[14:18:27] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:18:27] INFO:    Connection channel established succesfully
+[14:18:27] INFO:    Start to run command
+[14:18:27] INFO:    Connection channel closed
+[14:18:27] INFO:    Check if exec success or not ... 
+[14:18:27] INFO:    Execution failed while executing command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[14:18:27] INFO:    Error message: bash: ./sshxcute_test.sh: /bin/bash^M: 坏的解释器: 没有那个文件或目录
+[14:18:27] INFO:    Now wait 5 seconds to begin next task ...
+[14:18:32] INFO:    Connection channel disconnect
+[14:18:32] INFO:    SSH connection shutdown
+
+=============== [2017/08/31 15:47:10, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[15:47:10] INFO:    SSHExec initializing ...
+[15:47:10] INFO:    Session initialized and associated with user credential wangyj
+[15:47:10] INFO:    SSHExec initialized successfully
+[15:47:10] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[15:47:25] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[15:47:25] ERROR:   session is down
+
+=============== [2017/08/31 15:47:58, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[15:47:58] INFO:    SSHExec initializing ...
+[15:47:58] INFO:    Session initialized and associated with user credential 123
+[15:47:58] INFO:    SSHExec initialized successfully
+[15:47:58] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[15:48:00] INFO:    SSH connection established
+[15:48:00] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[15:48:00] INFO:    Connection channel established succesfully
+[15:48:00] INFO:    Start to run command
+[15:48:01] INFO:    Connection channel closed
+[15:48:01] INFO:    Check if exec success or not ... 
+[15:48:01] INFO:    Execution failed while executing command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[15:48:01] INFO:    Error message: bash: ./sshxcute_test.sh: /bin/bash^M: 坏的解释器: 没有那个文件或目录
+[15:48:01] INFO:    Now wait 5 seconds to begin next task ...
+[15:48:06] INFO:    Connection channel disconnect
+
+=============== [2017/09/01 09:58:18, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[09:58:18] INFO:    SSHExec initializing ...
+[09:58:18] INFO:    Session initialized and associated with user credential 123
+[09:58:18] INFO:    SSHExec initialized successfully
+[09:58:18] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[09:58:20] INFO:    SSH connection established
+[09:58:20] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[09:58:20] INFO:    Connection channel established succesfully
+[09:58:20] INFO:    Start to run command
+[09:58:21] INFO:    Connection channel closed
+[09:58:21] INFO:    Check if exec success or not ... 
+[09:58:21] INFO:    Execution failed while executing command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[09:58:21] INFO:    Error message: bash: ./sshxcute_test.sh: /bin/bash^M: 坏的解释器: 没有那个文件或目录
+[09:58:21] INFO:    Now wait 5 seconds to begin next task ...
+[09:58:26] INFO:    Connection channel disconnect
+
+=============== [2017/09/01 09:59:57, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[09:59:57] INFO:    SSHExec initializing ...
+[09:59:57] INFO:    Session initialized and associated with user credential 123
+[09:59:57] INFO:    SSHExec initialized successfully
+[09:59:57] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[10:00:00] INFO:    SSH connection established
+[10:00:00] INFO:    Command is sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[10:00:00] INFO:    Connection channel established succesfully
+[10:00:00] INFO:    Start to run command
+[10:00:00] INFO:    Connection channel closed
+[10:00:00] INFO:    Check if exec success or not ... 
+[10:00:00] INFO:    Execute successfully for command: sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[10:00:00] INFO:    Now wait 5 seconds to begin next task ...
+[10:00:05] INFO:    Connection channel disconnect
+[10:00:05] INFO:    Command is cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[10:00:05] INFO:    Connection channel established succesfully
+[10:00:05] INFO:    Start to run command
+[10:00:05] INFO:    Login success
+
+[10:00:05] INFO:    Connection channel closed
+[10:00:05] INFO:    Check if exec success or not ... 
+[10:00:05] INFO:    Execute successfully for command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
+[10:00:05] INFO:    Now wait 5 seconds to begin next task ...
+[10:00:11] INFO:    Connection channel disconnect

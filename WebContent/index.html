@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>物联网项目运维工具</title>
+<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="./easyui/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./easyui/themes/gray/easyui.css" />
+<link rel="stylesheet" type="text/css" href="./easyui/themes/color.css" />
+<link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css" />
+</head>
+<body>
+	<div id="title"
+		style="border: 1px solid #e4e4e4; left: 0px; top: 0px; width: 100%; height: 20%; background: #c003; position: absolute;">
+		<div onclick="addTab('文件对比','./fileOperator/compareFile.html')"
+			style="left: 100px; bottom: 25px; width: 65px; height: 90px; position: absolute; overflow: hidden;">
+			<div
+				style="width: 65px; height: 65px; position: absolute; border-radius: 50%; overflow: hidden;">
+				<img alt="文件对比" style="width: 65px; height: 65px;"
+					src="./image/tool.png">
+			</div>
+			<div style="left: 0px; bottom: 0px; width: 65px; position: absolute;">
+				<font color="#8B008B"> 文件对比 </font>
+			</div>
+		</div>
+		
+		<div onclick="addTab('文件修改','./fileOperator/modifyFile.html')"
+			style="left: 200px; bottom: 25px; width: 65px; height: 90px; position: absolute; overflow: hidden;">
+			<div
+				style="width: 65px; height: 65px; position: absolute; border-radius: 50%; overflow: hidden;">
+				<img alt="文件修改" style="width: 65px; height: 65px;"
+					src="./image/tool.png">
+			</div>
+			<div style="left: 0px; bottom: 0px; width: 65px; position: absolute;">
+				<font color="#8B008B"> 文件修改 </font>
+			</div>
+		</div>
+		
+		<div onclick="addTab('执行脚本','./fileOperator/modifyFile.html')"
+			style="left: 200px; bottom: 25px; width: 65px; height: 90px; position: absolute; overflow: hidden;">
+			<div
+				style="width: 65px; height: 65px; position: absolute; border-radius: 50%; overflow: hidden;">
+				<img alt="文件修改" style="width: 65px; height: 65px;"
+					src="./image/tool.png">
+			</div>
+			<div style="left: 0px; bottom: 0px; width: 65px; position: absolute;">
+				<font color="#8B008B"> 文件修改 </font>
+			</div>
+		</div>
+		
+	</div>
+	<div
+		style="left: 0px; top: 20%; width: 100%; height: 80%; position: absolute;">
+		<div id="tabs" style="width: 100%; height: 100%;" class="easyui-tabs">
+			<div title="主页"></div>
+		</div>
+	</div>
+</body>
+</html>
