@@ -6,13 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ztesoft.iot.maintain.inter.ServletInter;
 import com.ztesoft.iot.maintain.inter.imp.QueryHostName;
+import com.ztesoft.iot.maintain.inter.imp.QueryNextFileDirectoryName;
 import com.ztesoft.iot.maintain.inter.imp.QueryPortName;
 import com.ztesoft.iot.maintain.inter.imp.QueryTimeName;
 import com.ztesoft.iot.maintain.inter.imp.QueryVerticalTreeGrid;
 import com.ztesoft.iot.maintain.inter.imp.UpdateFileContent;
+import com.ztesoft.iot.maintain.inter.imp.UploadFileCommand;
+import com.ztesoft.iot.maintain.inter.imp.ExecuteScriptCommand;
 import com.ztesoft.iot.maintain.inter.imp.InterDefault;
 import com.ztesoft.iot.maintain.inter.imp.QueryAppName;
 import com.ztesoft.iot.maintain.inter.imp.QueryFileContent;
+import com.ztesoft.iot.maintain.inter.imp.QueryFileDirectoryName;
 import com.ztesoft.iot.maintain.inter.imp.QueryFileName;
 
 public class ServiceFactory {
@@ -36,6 +40,14 @@ public class ServiceFactory {
 			return new QueryVerticalTreeGrid(response, request);
 		} else if("UpdateFileContent.do".equals(type)){
 			return new UpdateFileContent(response, request);
+		} else if("QueryFileDirectoryName.do".equals(type)){
+			return new QueryFileDirectoryName(response, request);
+		} else if("QueryNextFileDirectoryName.do".equals(type)){
+			return new QueryNextFileDirectoryName(response, request);
+		}else if("ExecuteScriptCommand.do".equals(type)){
+			return new ExecuteScriptCommand(response, request);
+		}else if("UploadFileCommand.do".equals(type)){
+			return new UploadFileCommand(response, request);
 		} else {
 			return new InterDefault(response, type);
 		}

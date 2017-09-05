@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>执行脚本</title>
+<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../easyui/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../js/executeScript.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../easyui/themes/gray/easyui.css" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/color.css" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css" />
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'west',title:'执行脚本',split:true"
+		style="width: 280px;">
+		<div style="left: 12px; top: 35px; position: absolute;">
+			主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：<input id="Host" class="easyui-combobox"
+				data-options="valueField:'value',textField:'value',url:'QueryHostName.do'">
+		</div>
+		<div style="left: 12px; top: 69px; position: absolute;">
+			目&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录：<input id="FileDirectory" class="easyui-combobox"
+				data-options="valueField:'value',textField:'value'">
+		</div>
+		<div style="left: 12px; top: 101px; position: absolute;">
+			下级目录：<input id="NextFileDirectory" class="easyui-combobox"
+				data-options="valueField:'value',textField:'value'">
+		</div>
+		<div style="left: 12px; top: 133px; position: absolute;">
+			脚本目录:<input id="script_dir" style="width: 155px; height: 17px;margin-left: 10px;">
+		</div>
+		<div style="left: 12px; top: 164px; position: absolute;">
+			脚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：<input id="script_command" style="width: 155px; height: 17px;">
+		</div>
+		<div style="left: 12px; top: 195px; position: absolute;">
+			切换root：<select style="width: 160px; height: 22px;" id="is_root">
+				<option value="1">是</option>
+				<option value="0">否</option>
+			</select> <!-- <input id="Time" class="easyui-combobox"
+				data-options="valueField:'value',textField:'value'"> -->
+		</div>
+		<div style="left: 48px; top: 225px; position: absolute;">
+			<a href="#" class="easyui-linkbutton"
+				data-options="iconCls:'icon-large-shapes'"
+				onclick="exexuteCommand();">执行该脚本</a> 
+		</div>
+	</div>
+</body>
+</html>

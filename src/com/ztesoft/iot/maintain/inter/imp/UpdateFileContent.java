@@ -1,15 +1,10 @@
 package com.ztesoft.iot.maintain.inter.imp;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
-import java.net.URLDecoder;
-import java.sql.Clob;
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +36,6 @@ public class UpdateFileContent implements ServletInter {
 	@Override
 	public void doService() {
 		JSONObject json = new JSONObject();
-		StringBuffer content = null;
 		try {
 			String host = request.getParameter("host");
 			String app = request.getParameter("app");
@@ -53,6 +47,14 @@ public class UpdateFileContent implements ServletInter {
 			if (newFilecontent.equals(new String(newFilecontent.getBytes("ISO-8859-1"), "ISO-8859-1"))) {
 				newFilecontent = new String(newFilecontent.getBytes("ISO-8859-1"), "UTF-8");
 			} 
+			List<Object[]> list = dbo.search("select file_path from monitor_file_log where host_ip = ? and app_name = ? and host_port = ? and file_name = ? and file_change_date = to_date(?,'yyyy-mm-dd hh24:mi:ss')", host, app, port, file, time);
+			String filePathDir = "";
+			if(list.size() > 0){
+				filePathDir = (String) list.get(0)[0];
+				if (!"filePathDir".endsWith("/")) {
+					filePathDir += "/";
+				}
+			}
 			
 			newFilecontent = newFilecontent.replaceAll("&lt;","<").replaceAll("&gt;",">");
 			//将该内容生成文件，然后上传到linux系统中：
@@ -60,25 +62,12 @@ public class UpdateFileContent implements ServletInter {
 			
 			SSHExec ssh = ExecuteCommand.connect(host, ReadCon.USERNAME, ReadCon.PASSWORD);
 			
-			ssh.uploadSingleDataToServer(filenameTemp,"/home/wangyj/");
-			
-			List<Object[]> list = dbo.search("select file_content from monitor_file_log where host_ip = ? and app_name = ? and host_port = ? and file_name = ? and file_change_date = to_date(?,'yyyy-mm-dd hh24:mi:ss')", host, app, port, file, time);
-			Clob clob = null;
-			if(list.size() > 0){
-				clob = (Clob)list.get(0)[0];
-			}
-			if(clob != null){
-				content = clobToString(clob);
-				json.put("code", "0000");
-				json.put("content", content.toString().replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\r\n", "<br>"));
-			}else{
-				json.put("code", "1000");
-				json.put("message", "数据空！");
-			}
+			ssh.uploadSingleDataToServer(filenameTemp,filePathDir);
+			json.put("code", "0000");
+			json.put("message", "上传成功");
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			json.put("code", "1000");
-			json.put("message", "请求数据异常！");
+			json.put("message", "上传失败!");
 			e1.printStackTrace();
 		}
 		try {
@@ -89,20 +78,6 @@ public class UpdateFileContent implements ServletInter {
 			e.printStackTrace();
 		}
 	}
-	
-	public StringBuffer clobToString(Clob clob) throws SQLException, IOException {
-		Reader is = clob.getCharacterStream();
-		BufferedReader br = new BufferedReader(is);
-		StringBuffer sb = new StringBuffer();
-		String s = null;
-		while ((s = br.readLine()) != null) {
-			sb.append(s).append("\r\n");
-		}
-		br.close();
-		is.close();
-		return sb;
-	}
-	
 	
 	//生成文件路径
     private static String path = ReadCon.UPLOADTEMPFILEDIR;
@@ -143,86 +118,20 @@ public class UpdateFileContent implements ServletInter {
      * @throws IOException
      */
     public static boolean writeFileContent(String filepath,String newstr) throws IOException{
-		String[] lines = newstr.split("<br>");
-		FileWriter fw = new FileWriter(filepath);
-		BufferedWriter bw = new BufferedWriter(fw);
-		for (int i = 0; i < lines.length; i++) {
-			bw.write(lines[i] + "\r\n");
-		}
-		bw.close();
-    	fw.close();
-    	
     	Boolean bool = false;
-       /* String filein = newstr+"\r\n";//新写入的行，换行
-        String temp  = "";
-        
-        FileInputStream fis = null;
-        InputStreamReader isr = null;
-        BufferedReader br = null;
-        FileOutputStream fos  = null;
-        PrintWriter pw = null;
-        try {
-            File file = new File(filepath);//文件路径(包括文件名称)
-            //将文件读入输入流
-            fis = new FileInputStream(file);
-            isr = new InputStreamReader(fis);
-            br = new BufferedReader(isr);
-            StringBuffer buffer = new StringBuffer();
-            
-            //文件原有内容
-            for(int i=0;(temp =br.readLine())!=null;i++){
-                buffer.append(temp);
-                // 行与行之间的分隔符 相当于“\n”
-                buffer = buffer.append(System.getProperty("line.separator"));
-            }
-            buffer.append(filein);
-            
-            fos = new FileOutputStream(file);
-            pw = new PrintWriter(fos);
-            pw.write(buffer.toString().toCharArray());
-            pw.flush();
-            bool = true;
-        } catch (Exception e) {
-            // TODO: handle exception
-            e.printStackTrace();
-        }finally {
-            //不要忘记关闭
-            if (pw != null) {
-                pw.close();
-            }
-            if (fos != null) {
-                fos.close();
-            }
-            if (br != null) {
-                br.close();
-            }
-            if (isr != null) {
-                isr.close();
-            }
-            if (fis != null) {
-                fis.close();
-            }
-        }*/
-        return bool;
-    }
-    
-    /**
-     * 删除文件
-     * @param fileName 文件名称
-     * @return
-     */
-    public static boolean delFile(String fileName){
-        Boolean bool = false;
-        filenameTemp = path+fileName;
-        File file  = new File(filenameTemp);
-        try {
-            if(file.exists()){
-                file.delete();
-                bool = true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		try {
+			String[] lines = newstr.split("<br>");
+			FileWriter fw = new FileWriter(filepath);
+			BufferedWriter bw = new BufferedWriter(fw);
+			for (int i = 0; i < lines.length; i++) {
+				bw.write(lines[i] + "\r\n");
+			}
+			bw.close();
+			fw.close();
+			bool = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
         return bool;
     }
     
@@ -248,7 +157,6 @@ public class UpdateFileContent implements ServletInter {
 				System.err.println("error message: " + res.error_msg);
 			}
 		} catch (TaskExecFailException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

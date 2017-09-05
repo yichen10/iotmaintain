@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>执行脚本</title>
+<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../easyui/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../js/uploadFile.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../easyui/themes/gray/easyui.css" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/color.css" />
+<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css" />
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'west',title:'文件上传',split:true"
+		style="width: 280px;">
+
+		<form action="UploadFileCommand.do"
+			enctype="multipart/form-data" method="post">
+			<div style="left: 12px; top: 35px; position: absolute;">
+			主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：<input id="host" name = "host" class="easyui-combobox"
+				data-options="valueField:'value',textField:'value',url:'QueryHostName.do'">
+			</div>
+			<div style="left: 12px; top: 70px; position: absolute;">
+			文件目录:<input id="file_dir" name="file_dir" style="width: 155px; height: 17px;margin-left: 10px;">
+			</div>
+			<div style="left: 12px; top: 111px; position: absolute;">
+				上传文件:<br><input type="file" name="file1" id="file1"><br>
+			</div>
+			<div style="left: 12px; top: 163px; position: absolute;">
+				<input type="submit" value="提交">
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>

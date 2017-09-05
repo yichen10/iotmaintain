@@ -332,3 +332,792 @@
 [10:00:05] INFO:    Execute successfully for command: cd /home/wangyj ; ./sshxcute_test.sh hello world 
 [10:00:05] INFO:    Now wait 5 seconds to begin next task ...
 [10:00:11] INFO:    Connection channel disconnect
+
+=============== [2017/09/01 16:04:32, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[16:04:32] INFO:    SSHExec initializing ...
+[16:04:32] INFO:    Session initialized and associated with user credential 123
+[16:04:32] INFO:    SSHExec initialized successfully
+[16:04:32] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[16:04:34] INFO:    SSH connection established
+[16:04:34] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[16:04:35] INFO:    Connection channel established succesfully
+[16:04:35] INFO:    Start to upload
+[16:04:35] INFO:    Upload success
+[16:04:35] INFO:    channel disconnect
+[16:04:35] INFO:    Command is ls / 
+[16:04:35] INFO:    Connection channel established succesfully
+[16:04:35] INFO:    Start to run command
+[16:04:35] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[16:04:35] INFO:    Connection channel closed
+[16:04:35] INFO:    Check if exec success or not ... 
+[16:04:35] INFO:    Execute successfully for command: ls / 
+[16:04:35] INFO:    Now wait 5 seconds to begin next task ...
+[16:04:40] INFO:    Connection channel disconnect
+[16:04:40] INFO:    Command is sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[16:04:40] INFO:    Connection channel established succesfully
+[16:04:40] INFO:    Start to run command
+[16:04:40] INFO:    Connection channel closed
+[16:04:40] INFO:    Check if exec success or not ... 
+[16:04:40] INFO:    Execute successfully for command: sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[16:04:40] INFO:    Now wait 5 seconds to begin next task ...
+[16:04:45] INFO:    Connection channel disconnect
+[16:04:45] INFO:    Command is ls / 
+[16:04:45] INFO:    Connection channel established succesfully
+[16:04:45] INFO:    Start to run command
+[16:04:45] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[16:04:45] INFO:    Connection channel closed
+[16:04:45] INFO:    Check if exec success or not ... 
+[16:04:45] INFO:    Execute successfully for command: ls / 
+[16:04:45] INFO:    Now wait 5 seconds to begin next task ...
+[16:04:50] INFO:    Connection channel disconnect
+[16:04:50] INFO:    SSH connection shutdown
+
+=============== [2017/09/04 11:29:43, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[11:29:43] INFO:    SSHExec initializing ...
+[11:29:43] INFO:    Session initialized and associated with user credential 123
+[11:29:44] INFO:    SSHExec initialized successfully
+[11:29:44] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[11:29:46] INFO:    SSH connection established
+[11:29:46] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[11:29:46] INFO:    Connection channel established succesfully
+[11:29:46] INFO:    Start to upload
+[11:29:46] INFO:    Upload success
+[11:29:46] INFO:    channel disconnect
+[11:29:46] INFO:    Command is ls / 
+[11:29:47] INFO:    Connection channel established succesfully
+[11:29:47] INFO:    Start to run command
+[11:29:47] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[11:29:47] INFO:    Connection channel closed
+[11:29:47] INFO:    Check if exec success or not ... 
+[11:29:47] INFO:    Execute successfully for command: ls / 
+[11:29:47] INFO:    Now wait 5 seconds to begin next task ...
+[11:29:52] INFO:    Connection channel disconnect
+[11:29:52] INFO:    Command is sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[11:29:52] INFO:    Connection channel established succesfully
+[11:29:52] INFO:    Start to run command
+[11:29:52] INFO:    Connection channel closed
+[11:29:52] INFO:    Check if exec success or not ... 
+[11:29:52] INFO:    Execute successfully for command: sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[11:29:52] INFO:    Now wait 5 seconds to begin next task ...
+[11:29:57] INFO:    Connection channel disconnect
+[11:30:00] INFO:    Command is  /usr/local/bin/expect -c " set timeout 5; spawn su - ; expect "密码*"; sleep 3;send "123\r"; interact  " 
+[11:30:00] INFO:    Connection channel established succesfully
+[11:30:00] INFO:    Start to run command
+[11:30:00] INFO:    spawn su -
+
+[11:30:00] INFO:    密码：
+[12:06:07] INFO:    Connection channel closed
+[12:06:07] INFO:    Check if exec success or not ... 
+[12:06:07] INFO:    Execution failed while executing command:  /usr/local/bin/expect -c " set timeout 5; spawn su - ; expect "密码*"; sleep 3;send "123\r"; interact  " 
+[12:06:07] INFO:    Error message: 
+[12:06:07] INFO:    Now wait 5 seconds to begin next task ...
+[12:21:28] INFO:    Connection channel disconnect
+[12:21:38] ERROR:   session is down
+[12:21:38] ERROR:   session is down
+[12:21:38] INFO:    SSH connection shutdown
+
+=============== [2017/09/04 12:24:29, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[12:24:29] INFO:    SSHExec initializing ...
+[12:24:29] INFO:    Session initialized and associated with user credential 123
+[12:24:29] INFO:    SSHExec initialized successfully
+[12:24:29] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[12:24:32] INFO:    SSH connection established
+[12:24:32] INFO:    Ready to transfer local file 'D:\sshxcute_test.sh' to server directory '/home/wangyj/'
+[12:24:32] INFO:    Connection channel established succesfully
+[12:24:32] INFO:    Start to upload
+[12:24:32] INFO:    Upload success
+[12:24:32] INFO:    channel disconnect
+[12:24:32] INFO:    Command is ls / 
+[12:24:32] INFO:    Connection channel established succesfully
+[12:24:32] INFO:    Start to run command
+[12:24:32] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[12:24:32] INFO:    Connection channel closed
+[12:24:32] INFO:    Check if exec success or not ... 
+[12:24:32] INFO:    Execute successfully for command: ls / 
+[12:24:32] INFO:    Now wait 5 seconds to begin next task ...
+[12:24:37] INFO:    Connection channel disconnect
+[12:24:37] INFO:    Command is sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[12:24:37] INFO:    Connection channel established succesfully
+[12:24:37] INFO:    Start to run command
+[12:24:37] INFO:    Connection channel closed
+[12:24:38] INFO:    Check if exec success or not ... 
+[12:24:38] INFO:    Execute successfully for command: sed -i 's/$//' /home/wangyj/sshxcute_test.sh 
+[12:24:38] INFO:    Now wait 5 seconds to begin next task ...
+[12:24:43] INFO:    Connection channel disconnect
+[12:24:43] INFO:    Command is  /usr/local/bin/expect -c " set timeout 5; spawn su - ; expect "密码*"; sleep 3;send "123\r"; interact  " 
+[12:24:43] INFO:    Connection channel established succesfully
+[12:24:43] INFO:    Start to run command
+[12:24:43] INFO:    spawn su -
+
+[12:24:43] INFO:    密码：
+
+=============== [2017/09/04 13:16:02, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:16:02] INFO:    SSHExec initializing ...
+[13:16:02] INFO:    Session initialized and associated with user credential 123
+[13:16:02] INFO:    SSHExec initialized successfully
+[13:16:02] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:16:05] INFO:    SSH connection established
+[13:16:05] INFO:    Command is ls / 
+[13:16:05] INFO:    Connection channel established succesfully
+[13:16:05] INFO:    Start to run command
+[13:16:05] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[13:16:05] INFO:    Connection channel closed
+[13:16:05] INFO:    Check if exec success or not ... 
+[13:16:05] INFO:    Execute successfully for command: ls / 
+[13:16:05] INFO:    Now wait 5 seconds to begin next task ...
+[13:16:10] INFO:    Connection channel disconnect
+[13:16:10] INFO:    Command is cd /home/wangyj ; ./su_root.sh root 123 
+[13:16:10] INFO:    Connection channel established succesfully
+[13:16:10] INFO:    Start to run command
+[13:16:10] INFO:    spawn su - root
+
+[13:16:10] INFO:    密码：
+[13:16:10] INFO:    
+
+[13:16:10] INFO:    上一次登录：一 9月  4 13:01:37 CST 2017pts/21 上
+
+[13:16:11] INFO:    [root@localhost ~]# 
+[13:16:11] INFO:    echo 登录成功
+登录成功
+[root@localhost ~]# 
+
+=============== [2017/09/04 13:18:10, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[13:18:10] INFO:    SSHExec initializing ...
+[13:18:10] INFO:    Session initialized and associated with user credential 123
+[13:18:10] INFO:    SSHExec initialized successfully
+[13:18:10] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[13:18:12] INFO:    SSH connection established
+[13:18:12] INFO:    Command is ls / 
+[13:18:12] INFO:    Connection channel established succesfully
+[13:18:12] INFO:    Start to run command
+[13:18:12] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[13:18:12] INFO:    Connection channel closed
+[13:18:12] INFO:    Check if exec success or not ... 
+[13:18:12] INFO:    Execute successfully for command: ls / 
+[13:18:12] INFO:    Now wait 5 seconds to begin next task ...
+[13:18:17] INFO:    Connection channel disconnect
+[13:18:18] INFO:    Command is cd /home/wangyj ; ./su_root.sh root 123 
+[13:18:18] INFO:    Connection channel established succesfully
+[13:18:18] INFO:    Start to run command
+[13:18:18] INFO:    spawn su - root
+
+[13:18:18] INFO:    密码：
+
+[13:18:18] INFO:    上一次登录：一 9月  4 13:16:17 CST 2017pts/17 上
+
+[13:18:18] INFO:    [root@localhost ~]# 
+[13:18:18] INFO:    echo 登录成功
+登录成功
+[root@localhost ~]# 
+
+=============== [2017/09/04 14:58:32, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:58:32] INFO:    SSHExec initializing ...
+[14:58:32] INFO:    Session initialized and associated with user credential 123
+[14:58:32] INFO:    SSHExec initialized successfully
+[14:58:32] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:58:34] INFO:    SSH connection established
+[14:58:34] INFO:    Command is ls / 
+[14:58:35] INFO:    Connection channel established succesfully
+[14:58:35] INFO:    Start to run command
+[14:58:35] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:58:35] INFO:    Connection channel closed
+[14:58:35] INFO:    Check if exec success or not ... 
+[14:58:35] INFO:    Execute successfully for command: ls / 
+[14:58:35] INFO:    Now wait 5 seconds to begin next task ...
+[14:58:40] INFO:    Connection channel disconnect
+[14:58:40] INFO:    Command is cd /home/wangyj ; ./su_root.sh root 123 
+[14:58:40] INFO:    Connection channel established succesfully
+[14:58:40] INFO:    Start to run command
+[14:58:40] INFO:    spawn su - root
+
+[14:58:40] INFO:    密码：
+[14:58:40] INFO:    
+
+[14:58:40] INFO:    上一次登录：一 9月  4 13:18:24 CST 2017pts/22 上
+
+[14:58:40] INFO:    [root@localhost ~]# 
+[14:58:40] INFO:    echo 登录成功
+登录成功
+[root@localhost ~]# 
+
+=============== [2017/09/04 14:59:14, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:59:14] INFO:    SSHExec initializing ...
+[14:59:14] INFO:    Session initialized and associated with user credential 123
+[14:59:14] INFO:    SSHExec initialized successfully
+[14:59:14] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:59:17] INFO:    SSH connection established
+[14:59:17] INFO:    Command is ls / 
+[14:59:17] INFO:    Connection channel established succesfully
+[14:59:17] INFO:    Start to run command
+[14:59:17] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:17] INFO:    Connection channel closed
+[14:59:17] INFO:    Check if exec success or not ... 
+[14:59:17] INFO:    Execute successfully for command: ls / 
+[14:59:17] INFO:    Now wait 5 seconds to begin next task ...
+[14:59:22] INFO:    Connection channel disconnect
+[14:59:22] INFO:    Command is ls / 
+[14:59:22] INFO:    Connection channel established succesfully
+[14:59:22] INFO:    Start to run command
+[14:59:22] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:22] INFO:    Connection channel closed
+[14:59:22] INFO:    Check if exec success or not ... 
+[14:59:22] INFO:    Execute successfully for command: ls / 
+[14:59:22] INFO:    Now wait 5 seconds to begin next task ...
+[14:59:27] INFO:    Connection channel disconnect
+[14:59:27] INFO:    Command is ls / 
+[14:59:27] INFO:    Connection channel established succesfully
+[14:59:27] INFO:    Start to run command
+[14:59:27] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:27] INFO:    Connection channel closed
+[14:59:27] INFO:    Check if exec success or not ... 
+[14:59:27] INFO:    Execute successfully for command: ls / 
+[14:59:27] INFO:    Now wait 5 seconds to begin next task ...
+
+=============== [2017/09/04 14:59:31, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[14:59:31] INFO:    SSHExec initializing ...
+[14:59:31] INFO:    Session initialized and associated with user credential 123
+[14:59:31] INFO:    SSHExec initialized successfully
+[14:59:31] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[14:59:32] INFO:    Connection channel disconnect
+[14:59:32] INFO:    SSH connection shutdown
+[14:59:33] INFO:    SSH connection established
+[14:59:33] INFO:    Command is ls / 
+[14:59:34] INFO:    Connection channel established succesfully
+[14:59:34] INFO:    Start to run command
+[14:59:34] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:34] INFO:    Connection channel closed
+[14:59:34] INFO:    Check if exec success or not ... 
+[14:59:34] INFO:    Execute successfully for command: ls / 
+[14:59:34] INFO:    Now wait 5 seconds to begin next task ...
+[14:59:39] INFO:    Connection channel disconnect
+[14:59:39] INFO:    Command is ls / 
+[14:59:39] INFO:    Connection channel established succesfully
+[14:59:39] INFO:    Start to run command
+[14:59:39] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:39] INFO:    Connection channel closed
+[14:59:39] INFO:    Check if exec success or not ... 
+[14:59:39] INFO:    Execute successfully for command: ls / 
+[14:59:39] INFO:    Now wait 5 seconds to begin next task ...
+[14:59:44] INFO:    Connection channel disconnect
+[14:59:49] INFO:    Command is ls / 
+[14:59:49] INFO:    Connection channel established succesfully
+[14:59:49] INFO:    Start to run command
+[14:59:49] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[14:59:49] INFO:    Connection channel closed
+[14:59:49] INFO:    Check if exec success or not ... 
+[14:59:49] INFO:    Execute successfully for command: ls / 
+[14:59:49] INFO:    Now wait 5 seconds to begin next task ...
+[14:59:54] INFO:    Connection channel disconnect
+[15:00:46] INFO:    SSH connection shutdown
+
+=============== [2017/09/04 15:03:19, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[15:03:19] INFO:    SSHExec initializing ...
+[15:03:19] INFO:    Session initialized and associated with user credential 123
+[15:03:19] INFO:    SSHExec initialized successfully
+[15:03:19] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[15:03:21] INFO:    SSH connection established
+[15:03:21] INFO:    Command is ls / 
+[15:03:22] INFO:    Connection channel established succesfully
+[15:03:22] INFO:    Start to run command
+[15:03:22] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:03:22] INFO:    Connection channel closed
+[15:03:22] INFO:    Check if exec success or not ... 
+[15:03:22] INFO:    Execute successfully for command: ls / 
+[15:03:22] INFO:    Now wait 5 seconds to begin next task ...
+[15:03:27] INFO:    Connection channel disconnect
+[15:03:27] INFO:    Command is ls / 
+[15:03:27] INFO:    Connection channel established succesfully
+[15:03:27] INFO:    Start to run command
+[15:03:27] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:03:27] INFO:    Connection channel closed
+[15:03:27] INFO:    Check if exec success or not ... 
+[15:03:27] INFO:    Execute successfully for command: ls / 
+[15:03:27] INFO:    Now wait 5 seconds to begin next task ...
+[15:03:32] INFO:    Connection channel disconnect
+[15:03:36] INFO:    Command is ls / 
+[15:03:37] INFO:    Connection channel established succesfully
+[15:03:37] INFO:    Start to run command
+[15:03:37] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:03:37] INFO:    Connection channel closed
+[15:03:37] INFO:    Check if exec success or not ... 
+[15:03:37] INFO:    Execute successfully for command: ls / 
+[15:03:37] INFO:    Now wait 5 seconds to begin next task ...
+[15:03:42] INFO:    Connection channel disconnect
+[15:04:05] INFO:    SSH connection shutdown
+
+=============== [2017/09/04 15:04:52, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[15:04:52] INFO:    SSHExec initializing ...
+[15:04:52] INFO:    Session initialized and associated with user credential 123
+[15:04:52] INFO:    SSHExec initialized successfully
+[15:04:52] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[15:04:55] INFO:    SSH connection established
+[15:04:55] INFO:    Command is ls / 
+[15:04:55] INFO:    Connection channel established succesfully
+[15:04:55] INFO:    Start to run command
+[15:04:55] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:04:55] INFO:    Connection channel closed
+[15:04:55] INFO:    Check if exec success or not ... 
+[15:04:55] INFO:    Execute successfully for command: ls / 
+[15:04:55] INFO:    Now wait 5 seconds to begin next task ...
+[15:05:00] INFO:    Connection channel disconnect
+[15:05:00] INFO:    Command is ls / 
+[15:05:00] INFO:    Connection channel established succesfully
+[15:05:00] INFO:    Start to run command
+[15:05:00] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:05:00] INFO:    Connection channel closed
+[15:05:00] INFO:    Check if exec success or not ... 
+[15:05:00] INFO:    Execute successfully for command: ls / 
+[15:05:00] INFO:    Now wait 5 seconds to begin next task ...
+[15:05:05] INFO:    Connection channel disconnect
+[15:05:12] INFO:    Command is ls / 
+[15:05:12] INFO:    Connection channel established succesfully
+[15:05:12] INFO:    Start to run command
+[15:05:12] INFO:    1
+app
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+tomcat
+usr
+var
+
+[15:05:12] INFO:    Connection channel closed
+[15:05:12] INFO:    Check if exec success or not ... 
+[15:05:12] INFO:    Execute successfully for command: ls / 
+[15:05:12] INFO:    Now wait 5 seconds to begin next task ...
+[15:05:17] INFO:    Connection channel disconnect
+[15:05:41] INFO:    SSH connection shutdown
+
+=============== [2017/09/04 16:09:03, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[16:09:03] INFO:    SSHExec initializing ...
+[16:09:03] INFO:    Session initialized and associated with user credential 123
+[16:09:03] INFO:    SSHExec initialized successfully
+[16:09:03] INFO:    SSHExec trying to connect wangyj@192.168.25.15
+[16:09:05] INFO:    SSH connection established
+[16:09:05] INFO:    Command is  /usr/local/bin/expect -c " spawn su - ; sleep 2 ;expect "密码*"; send "123\r"; sleep 5; interact ; " 
+[16:09:06] INFO:    Connection channel established succesfully
+[16:09:06] INFO:    Start to run command
+[16:09:06] INFO:    spawn su -
+
+[16:09:08] INFO:    密码：

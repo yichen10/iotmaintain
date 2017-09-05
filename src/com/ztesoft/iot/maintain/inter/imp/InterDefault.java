@@ -29,7 +29,6 @@ public class InterDefault implements ServletInter {
 			PrintWriter pw = response.getWriter();
 			pw.write(json.toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

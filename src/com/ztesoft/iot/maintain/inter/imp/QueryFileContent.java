@@ -50,7 +50,6 @@ public class QueryFileContent implements ServletInter {
 				json.put("message", "数据空！");
 			}
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			json.put("code", "1000");
 			json.put("message", "请求数据异常！");
 			e1.printStackTrace();
@@ -60,7 +59,6 @@ public class QueryFileContent implements ServletInter {
 			PrintWriter pw = response.getWriter();
 			pw.write(json.toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

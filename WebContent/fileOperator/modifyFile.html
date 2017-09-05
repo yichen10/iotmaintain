@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css" />
 </head>
 <body class="easyui-layout">
-	<div data-options="region:'west',title:'配置',split:true"
+	<div data-options="region:'west',title:'文件修改',split:true"
 		style="width: 280px;">
 		<div style="left: 12px; top: 35px; position: absolute;">
 			主机：<input id="Host" class="easyui-combobox"
@@ -46,31 +46,12 @@
 	</div>
 	<div data-options="region:'center'"
 		style="padding: 5px; background: #eee;">
-		<div id="alongFile"
+		<div id="alongFile" title="编辑文件"
 			style="left: 0px; top: 0; width: 100%; height: 100%; position: absolute; background: #FFFAFA;">
 			<div id="alongFileContentEdit" 
 				style="left: 2.5%; top: 2.5%; width: 95%; height: 95%; border: 3px solid #FFE1FF; background: #FFFAF0; position: absolute; overflow: auto;">
 			</div>
 		</div>
-		<!-- <div id="doubleFile"
-			style="left: 0px; top: 0; width: 100%; height: 100%; position: absolute; background: #FFFAFA;">
-			<div id="originalFile"
-				style="left: 20px; top: 2.5%; width: 47.5%; height: 95%; border: 3px solid #FFE1FF; background: #FFFAF0; position: absolute; overflow: scroll;"></div>
-			<div id="referenceFile"
-				style="right: 20px; top: 2.5%; width: 47.5%; height: 95%; border: 3px solid #FFE1FF; background: #FFFAF0; position: absolute; overflow: scroll;"></div>
-		</div> -->
-	</div>
-	<div id="sidewayDialog" class="easyui-dialog" title="编辑该文件"
-		style="width: 220px; height: 280px;"
-		data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true">
-		<ul id="ulList" class="easyui-datalist" title="文件修改时间"
-			style="width: 100%; height: 100%"
-			data-options="valueField:'value',textField:'value',onDblClickRow:function(index, row){onDblRow(index, row);}"></ul>
-	</div>
-	<div id="vertical" class="easyui-dialog" title="上传该文件"
-		style="width: 280px; height: 400px;"
-		data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true">
-		<ul id="ttList" style="width: 100%; height: 100%"></ul>
 	</div>
 </body>
 </html>

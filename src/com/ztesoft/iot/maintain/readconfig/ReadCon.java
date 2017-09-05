@@ -11,6 +11,11 @@ public class ReadCon {
 	public static String PASSWORD;
 	
 	public static String UPLOADTEMPFILEDIR;
+	
+	public static String ROOTPASSWORD;
+	
+	public static String SUROOTFILEDIR;
+	
 	static{
 		Properties ptes = new Properties();
 		try {
@@ -19,6 +24,8 @@ public class ReadCon {
 			USERNAME = ptes.getProperty("username");
 			PASSWORD = ptes.getProperty("password");
 			UPLOADTEMPFILEDIR = ptes.getProperty("uploadTempFileDir");
+			ROOTPASSWORD = ptes.getProperty("root_password");
+			SUROOTFILEDIR = ptes.getProperty("su_root_file_dir");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

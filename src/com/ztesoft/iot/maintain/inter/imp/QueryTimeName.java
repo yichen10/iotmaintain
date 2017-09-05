@@ -40,7 +40,6 @@ public class QueryTimeName implements ServletInter {
 				json.add(jsonobj);
 			}
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
@@ -48,7 +47,6 @@ public class QueryTimeName implements ServletInter {
 			PrintWriter pw = response.getWriter();
 			pw.write(json.toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
