@@ -63,7 +63,7 @@ public class ExecuteScriptCommand implements ServletInter {
 			} else {
 				if (StringUtils.isNotEmpty(fileDirectory)) {
 					CustomTask ct1 = new ExecShellScript(fileDirectory, scriptCommand, "");
-					Result res1 = ssh.exec(ct1);ssh.exec(ct1);
+					Result res1 = ssh.exec(ct1);
 					if (res1.isSuccess) {
 						json.put("code", "0000");
 						json.put("message", "脚本执行成功");

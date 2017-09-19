@@ -10,6 +10,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.ztesoft.iot.maintain.dao.DbOperate;
 import com.ztesoft.iot.maintain.inter.ServletInter;
 import com.ztesoft.iot.maintain.readconfig.ReadCon;
@@ -32,6 +34,12 @@ public class UpdateFileContent implements ServletInter {
 		this.response = response;
 		this.request = request;
 	}
+	
+	//生成文件路径
+    private static String path = ReadCon.UPLOADTEMPFILEDIR;
+    
+    //文件路径+名称
+    private static String filenameTemp;
 
 	@Override
 	public void doService() {
@@ -43,6 +51,7 @@ public class UpdateFileContent implements ServletInter {
 			String file = request.getParameter("file");
 			String time = request.getParameter("time");
 			String newFilecontent = request.getParameter("new_filecontent");
+			String isRoot = request.getParameter("is_root");
 			
 			if (newFilecontent.equals(new String(newFilecontent.getBytes("ISO-8859-1"), "ISO-8859-1"))) {
 				newFilecontent = new String(newFilecontent.getBytes("ISO-8859-1"), "UTF-8");
@@ -57,14 +66,38 @@ public class UpdateFileContent implements ServletInter {
 			}
 			
 			newFilecontent = newFilecontent.replaceAll("&lt;","<").replaceAll("&gt;",">");
-			//将该内容生成文件，然后上传到linux系统中：
+			//将该内容生成文件，放在本机的uploadTempFileDir目录下，文件名为：filenameTemp
 			createFile(file, newFilecontent);
 			
 			SSHExec ssh = ExecuteCommand.connect(host, ReadCon.USERNAME, ReadCon.PASSWORD);
-			
-			ssh.uploadSingleDataToServer(filenameTemp,filePathDir);
-			json.put("code", "0000");
-			json.put("message", "上传成功");
+			if (StringUtils.isNotEmpty(isRoot) && "1".equals(isRoot)) {
+				// 将文件上传到linux临时目录；
+				ssh.uploadSingleDataToServer(filenameTemp,ReadCon.SUROOTFILEDIR);
+				String suRootFile = ReadCon.SUROOTFILEDIR + "su_root_copyfile.sh";
+				String userdir = this.getClass().getClassLoader().getResource("").getPath();
+				// 将文件上传到该系统：
+				ssh.uploadSingleDataToServer(userdir + "su_root_copyfile.sh", suRootFile);
+				System.out.println("userdir:"+userdir+"suRootFile:"+suRootFile);
+				CustomTask ct1 = new ExecCommand("sed -i 's/\r$//' " + suRootFile);
+				CustomTask ct2 = new ExecCommand("chmod 755 " + suRootFile);
+				CustomTask ct3 = new ExecShellScript(ReadCon.SUROOTFILEDIR, "./su_root_copyfile.sh",
+						"root " + ReadCon.ROOTPASSWORD + " " + ReadCon.SUROOTFILEDIR + "  " +ReadCon.SUROOTFILEDIR+file +" " + filePathDir);
+				Result res1 = ssh.exec(ct1);
+				Result res2 = ssh.exec(ct2);
+				Result res3 = ssh.exec(ct3);
+				System.out.println("eee");
+				if (res1.isSuccess && res2.isSuccess && res3.isSuccess) {
+					json.put("code", "0000");
+					json.put("message", "脚本执行成功");
+				} else {
+					json.put("code", "1000");
+					json.put("message", "脚本执行异常");
+				}
+			} else {
+				ssh.uploadSingleDataToServer(filenameTemp,filePathDir);
+				json.put("code", "0000");
+				json.put("message", "上传成功");
+			}
 		} catch (Exception e1) {
 			json.put("code", "1000");
 			json.put("message", "上传失败!");
@@ -79,11 +112,7 @@ public class UpdateFileContent implements ServletInter {
 		}
 	}
 	
-	//生成文件路径
-    private static String path = ReadCon.UPLOADTEMPFILEDIR;
-    
-    //文件路径+名称
-    private static String filenameTemp;
+
     /**
      * 创建文件
      * @param fileName  文件名称
